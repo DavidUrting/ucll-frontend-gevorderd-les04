@@ -2,13 +2,9 @@
 
 export class LijstOnderdeel {
     constructor(lijst, id, tekst) {
-        this._lijst = lijst;
-        this._id = id;
-        this.tekst = tekst;
-    }
-
-    get id() {
-        return this._id;
+        this.lijst = lijst;
+        this.id = id;
+        this._tekst = tekst;
     }
 
     get tekst() {
@@ -17,7 +13,7 @@ export class LijstOnderdeel {
 
     set tekst(value) {
         this._tekst = value;
-        this._lijst.listeners.forEach((l) => {
+        this.lijst.listeners.forEach((l) => {
             l(new LijstChangeEvent(this));
         });
     }
