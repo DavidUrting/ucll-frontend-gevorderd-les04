@@ -2,17 +2,23 @@
 <html>
 <head>
     <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
     <title>Lijstjes!</title>
 </head>
 <body>
-    <nav>
-        <ul id="lijst"></ul>
-    </nav>
-    <main>
-        <input type="text" id="selected-onderdeel-titel" />
-        <textarea id="selected-onderdeel-omschrijving" rows="10"></textarea>
-    </main>
-    <button id="add">Add</button>
+    <div class="container">
+        <div class="row">
+            <nav class="col-4">
+                <ul id="lijst" style="list-style: none"></ul>
+            </nav>
+            <section class="col-8">
+                <input class="row" type="text" id="selected-onderdeel-titel" />
+                <textarea class="row" id="selected-onderdeel-omschrijving" rows="10"></textarea>
+            </section>
+        </div>
+        <button id="add">Add</button>
+    </div>
     <script src="main.js"></script>
 </body>
 </html>

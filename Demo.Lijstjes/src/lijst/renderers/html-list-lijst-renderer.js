@@ -23,7 +23,7 @@ export class HtmlListLijstRenderer extends LijstRenderer {
         this.lijst.onderdelen.forEach((o) => {
             let li = document.createElement("li");
             li.id = `${this.ulElement.id}-${o.id}`
-            li.setAttribute("data-onderdeel-id", o.id);
+            li.setAttribute("data-onderdeel-id", o.id);           
             li.innerHTML = `<input type='text' readonly /><button>X</button>`;
             this.ulElement.appendChild(li);
             if (this.lijst instanceof SelecteerbareLijst) {

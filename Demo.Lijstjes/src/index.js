@@ -1,4 +1,9 @@
-﻿import { SelecteerbareLijst } from "./lijst/selecteerbare-lijst";
+﻿import "jquery";
+import "popper.js";
+import "bootstrap";
+import "bootstrap/dist/css/bootstrap.min.css";
+
+import { SelecteerbareLijst } from "./lijst/selecteerbare-lijst";
 import { LijstSelectedEvent } from './lijst/selecteerbare-lijst-events';
 import { HtmlListLijstRenderer } from "./lijst/renderers/html-list-lijst-renderer";
 
