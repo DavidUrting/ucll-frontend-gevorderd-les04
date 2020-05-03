@@ -1,6 +1,6 @@
-﻿class LijstEvent {
+﻿export class LijstEvent {
     constructor(onderdeel) {
-        this.onderdeel;
+        this.onderdeel = onderdeel;
     }
 }
 
@@ -17,7 +17,12 @@ export class LijstRemoveEvent extends LijstEvent {
 }
 
 export class LijstChangeEvent extends LijstEvent {
-    constructor(onderdeel) {
+    constructor(onderdeel, eigenschap) {
         super(onderdeel);
+        this._eigenschap = eigenschap;
+    }
+
+    get eigenschap() {
+        return this._eigenschap;
     }
 }

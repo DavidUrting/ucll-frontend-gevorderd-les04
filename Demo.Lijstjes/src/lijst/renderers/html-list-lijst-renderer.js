@@ -1,4 +1,5 @@
 ﻿import { LijstRenderer } from './lijst-renderer';
+import { SelecteerbareLijst } from '../selecteerbare-lijst';
 
 /*
  * HTML ul/ol renderer voor Lijst objecten.
@@ -22,9 +23,15 @@ export class HtmlListLijstRenderer extends LijstRenderer {
         this.lijst.onderdelen.forEach((o) => {
             let li = document.createElement("li");
             li.id = `${this.ulElement.id}-${o.id}`
-            li.innerHTML = `<div><input type='text' /><button data-onderdeel-id='${o.id}'>X</button></div>`;
+            li.setAttribute("data-onderdeel-id", o.id);
+            li.innerHTML = `<input type='text' readonly /><button>X</button>`;
             this.ulElement.appendChild(li);
-            document.querySelector(`#${li.id} input`).value = o.tekst;
+            if (this.lijst instanceof SelecteerbareLijst) {
+                document.querySelector(`#${li.id}`).addEventListener("click", (e) => {
+                    this.lijst.selectedOnderdeelId = o.id;
+                });
+            }
+            document.querySelector(`#${li.id} input`).value = o.titel;
             document.querySelector(`#${li.id} input`).addEventListener("input", (e) => {
                 this.skipEvents = true;
                 o.tekst = e.target.value;
@@ -32,7 +39,7 @@ export class HtmlListLijstRenderer extends LijstRenderer {
                 e.preventDefault();
             });
             document.querySelector(`#${li.id} button`).addEventListener("click", (e) => {
-                this.lijst.remove(e.target.getAttribute('data-onderdeel-id'));
+                this.lijst.remove(o.id);
                 e.preventDefault();
             });
         });

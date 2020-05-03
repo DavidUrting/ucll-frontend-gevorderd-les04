@@ -1,4 +1,4 @@
-﻿import { LijstAddEvent, LijstRemoveEvent } from './lijst-event';
+﻿import { LijstAddEvent, LijstRemoveEvent, LijstSelectedEvent } from './lijst-events';
 import { LijstOnderdeel } from "./lijst-onderdeel"; 
 
 export class Lijst {
@@ -8,13 +8,29 @@ export class Lijst {
         this.listeners = [];
     }
 
-    add(tekst) {
-        let onderdeel = new LijstOnderdeel(this, this.sequence++, tekst);
+    add(titel, omschrijving) {
+        let onderdeel = new LijstOnderdeel(this, this.sequence++, titel, omschrijving);
         this.onderdelen.push(onderdeel);
         this.listeners.forEach(l => {
             l(new LijstAddEvent(onderdeel));
         });
         return onderdeel;
+    }
+
+    get(id) {
+        id = parseInt(id);
+        let index = -1;
+        for (let i = 0; i < this.onderdelen.length; i++) {
+            if (this.onderdelen[i].id === id) {
+                index = i;
+                break;
+            }
+        }
+
+        if (index >= 0) {
+            let onderdeel = this.onderdelen[index];
+            return onderdeel;
+        }
     }
 
     remove(id) {
