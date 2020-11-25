@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Les 4 - JavaScript Demo</title>
+    <title>Les 4 - JavaScript Demo (geen Webpack)</title>
 
     <!-- Latest compiled and minified CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
@@ -14,6 +14,10 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
 </head>
 <body class="container">
+    <p class="alert alert-warning">
+        Dit html bestand is gelijkaardig aan het html bestand in Demo.JavaScript.
+        Maar omdat er geen gebruik wordt gemaakt van webpack moeten alle 'losse' JavaScript bestanden één per één toegevoegd worden onderaan.
+    </p>
     <article>
         <h1>Basis</h1>
         <p>In dit artikel worden de basisconcepten van JavaScript uitgelegd.</p>
@@ -116,7 +120,28 @@
     <!-- Latest compiled and minified JavaScript -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
 
-    <!-- Dit is ons gebundeld JavaScript bestand. Het werd gebuild vanuit /src/index.js. -->
-    <script src="main.js"></script>
+    <!-- Aangezien we geen webpack gebruiken moeten we alle javascript files één per één toevoegen.
+        Daarenboven moeten we ook op de volgorde letten waarin we ze toevoegen, want sommige bestanden kunnen
+        afhankelijk zijn van andere bestanden. -->
+    <!-- basis concepten -->
+    <script src="js/basis/comments.js"></script>
+    <script src="js/basis/conditional.js"></script>
+    <script src="js/basis/exceptions.js"></script>
+    <script src="js/basis/functions.js"></script>
+    <script src="js/basis/input.js"></script>
+    <script src="js/basis/loops.js"></script>
+    <script src="js/basis/objects.js"></script>
+    <script src="js/basis/output.js"></script>
+    <script src="js/basis/types.js"></script>
+    <script src="js/basis/var-let-const.js"></script>
+
+    <!-- modules voorbeeld
+    Bemerk dat ook het attribuut type="module" werd toegevoegd.
+    Dit zorgt ervoor dat een (moderne) browser het JavaScript bestand als module herkent,
+    waardoor je kan gebruik maken van import en export.
+    -->
+    <script type="module" src="js/modules/applicatie.js"></script>
+    <script type="module" src="js/modules/http.js"></script>
+    <script type="module" src="js/modules/weather.js"></script>
 </body>
 </html>
