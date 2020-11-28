@@ -1,122 +1,15 @@
 ﻿<!DOCTYPE html>
-<html lang="nl-be">
+<html lang="nl">
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-
-    <title>Les 4 - JavaScript Demo</title>
-
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <meta charset="utf-8" />
+    <title>Onderdeel 4 - Demo.JavaScript (basis, classes en modules)</title>
 </head>
-<body class="container">
-    <article>
-        <h1>Basis</h1>
-        <p>In dit artikel worden de basisconcepten van JavaScript uitgelegd.</p>
-        <section>
-            <h2>Commentaar</h2>
-            <p>Zie slides en <code>comments.js</code></p>
-        </section>
-        <section>
-            <h2>Tonen van output</h2>
-            <p>
-                Zie slides en <code>output.js</code>
-            </p>
-            <ul>
-                <li>console output kan je op de developer console terugvinden van je browser (F12).</li>
-                <li>alerts worden als popup getoond. Momenteel uitgeschakeld in output.js</li>
-                <li id="basics-output-dom"></li>
-                <li id="basics-output-dom2"></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Types - in een notendop</h2>
-            <p>
-                Zie slides en <code>types.js</code>
-            </p>
-        </section>
-        <section>
-            <h2>Exceptions</h2>
-            <p>
-                Zie slides en <code>throw-try-catch-finally.js</code>
-            </p>
-        </section>
-        <section>
-            <h2>Conditional statements</h2>
-            <p>
-                Zie slides en <code>conditional.js</code>
-            </p>
-        </section>
-        <section>
-            <h2>Loops</h2>
-            <p>
-                Zie slides en <code>loops.js</code>
-            </p>
-        </section>
-        <section>
-            <h2>Functions</h2>
-            <p>
-                Zie slides en <code>functions.js</code>
-            </p>
-            <ul>
-                <li>'add' via gedeclareerde functie: <span id="basics-functions-decl"></span></li>
-                <li>'add' via functie expressie: <span id="basics-functions-expr"></span></li>
-                <li>'add' via arrow function: <span id="basics-functions-arrow"></span></li>
-            </ul>
-        </section>
-        <section>
-            <h2>Objects</h2>
-            <p>
-                Zie slides en <code>objects.js</code>
-            </p>
-            <ul>
-                <li>Uitvinder van WWW: <span id="basics-objects-www"></span></li>
-                <li>Uitvinder van JavaScript: <span id="basics-objects-js"></span></li>
-            </ul>
-        </section>
-        <section>
-            <h2>var-let-const</h2>
-            <p>
-                Zie slides en <code>var-let-const.js</code>
-            </p>
-        </section>
-        <section>
-            <h2>Lezen van en reageren op input</h2>
-            <p>
-                Zie slides en <code>input.js</code>
-            </p>
-            <form>
-                <label for="in">Dit veld</label>
-                <input id="basics-input-dom-in" name="in" type="text" />
-                <br />
-                <label for="out">is gesynchroniseerd met dit veld</label>
-                <input id="basics-input-dom-out" name="out" type="text" readonly />
-                <br />
-                <button id="basics-input-dom-button">Synchroniseer manueel</button>
-                <label for="out2">naar dit veld</label>
-                <input id="basics-input-dom-out2" name="out2" type="text" readonly />
-            </form>
-        </section>
-    </article>
-
-    <article>
-        <h1>Modules</h1>
-        <section>
-            <h2>Voorbeeld: gebruik van een weerservice</h2>
-            <p class="alert alert-info">Vandaag is het: <span id="modules-example"></span></p>
-        </section>
-    </article>
-
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
-
-    <!-- Dit is ons gebundeld JavaScript bestand. Het werd gebuild vanuit /src/index.js. -->
-    <script src="main.js"></script>
+<body>
+    <h1>Onderdeel 4 - Demo.JavaScript (basis, classes en modules)</h1>
+    <p>In deze oplossing kan je twee implementaties bekijken:</p>
+    <ul>
+        <li><a href="index.nowebpack.html">Zonder webpack</a></li>
+        <li><a href="index.webpack.html">Met webpack</a> [<span title="Een 'Extra' oefening/oplossing is een oplossing die je mag proberen uit te werken maar die niet verplicht is. Tijdens opdrachten en op het examen kan het jou wel bonuspunten opleveren!">Extra</span>]</li>
+    </ul>
 </body>
 </html>

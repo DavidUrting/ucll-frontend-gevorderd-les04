@@ -6,20 +6,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
 
-    <title>Les 4 - JavaScript Demo (geen Webpack)</title>
+    <title>Onderdeel 4 - Demo.JavaScript: basis, classes en modules (MET webpack)</title>
 
-    <!-- Latest compiled and minified CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-    <!-- Optional theme -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap-theme.min.css" integrity="sha384-rHyoN1iRsVXV4nD0JutlnGaslCJuC7uwjduW9SVrLvRYooPp2bWYgmgJQIXwl/Sp" crossorigin="anonymous">
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
 </head>
 <body class="container">
-    <p class="alert alert-warning">
-        Dit html bestand is gelijkaardig aan het html bestand in Demo.JavaScript.
-        Maar omdat er geen gebruik wordt gemaakt van webpack moeten alle 'losse' JavaScript bestanden één per één toegevoegd worden onderaan.
-    </p>
+    <h1>Onderdeel 4 - Demo.JavaScript: basis, classes en modules (MET webpack)</h1>
     <article>
-        <h1>Basis</h1>
+        <h2>Basis</h2>
         <p>In dit artikel worden de basisconcepten van JavaScript uitgelegd.</p>
         <section>
             <h2>Commentaar</h2>
@@ -38,31 +33,31 @@
             </ul>
         </section>
         <section>
-            <h2>Types - in een notendop</h2>
+            <h3>Types - in een notendop</h3>
             <p>
                 Zie slides en <code>types.js</code>
             </p>
         </section>
         <section>
-            <h2>Exceptions</h2>
+            <h3>Exceptions</h3>
             <p>
                 Zie slides en <code>throw-try-catch-finally.js</code>
             </p>
         </section>
         <section>
-            <h2>Conditional statements</h2>
+            <h3>Conditional statements</h3>
             <p>
                 Zie slides en <code>conditional.js</code>
             </p>
         </section>
         <section>
-            <h2>Loops</h2>
+            <h3>Loops</h3>
             <p>
                 Zie slides en <code>loops.js</code>
             </p>
         </section>
         <section>
-            <h2>Functions</h2>
+            <h3>Functions</h3>
             <p>
                 Zie slides en <code>functions.js</code>
             </p>
@@ -73,7 +68,7 @@
             </ul>
         </section>
         <section>
-            <h2>Objects</h2>
+            <h3>Objects</h3>
             <p>
                 Zie slides en <code>objects.js</code>
             </p>
@@ -83,13 +78,13 @@
             </ul>
         </section>
         <section>
-            <h2>var-let-const</h2>
+            <h3>var-let-const</h3>
             <p>
                 Zie slides en <code>var-let-const.js</code>
             </p>
         </section>
         <section>
-            <h2>Lezen van en reageren op input</h2>
+            <h3>Lezen van en reageren op input</h3>
             <p>
                 Zie slides en <code>input.js</code>
             </p>
@@ -108,40 +103,18 @@
     </article>
 
     <article>
-        <h1>Modules</h1>
+        <h2>Modules</h2>
         <section>
-            <h2>Voorbeeld: gebruik van een weerservice</h2>
+            <h3>Voorbeeld: gebruik van een weerservice</h3>
             <p class="alert alert-info">Vandaag is het: <span id="modules-example"></span></p>
         </section>
     </article>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <!-- Latest compiled and minified JavaScript -->
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!-- JavaScript voor Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
 
-    <!-- Aangezien we geen webpack gebruiken moeten we alle javascript files één per één toevoegen.
-        Daarenboven moeten we ook op de volgorde letten waarin we ze toevoegen, want sommige bestanden kunnen
-        afhankelijk zijn van andere bestanden. -->
-    <!-- basis concepten -->
-    <script src="js/basis/comments.js"></script>
-    <script src="js/basis/conditional.js"></script>
-    <script src="js/basis/exceptions.js"></script>
-    <script src="js/basis/functions.js"></script>
-    <script src="js/basis/input.js"></script>
-    <script src="js/basis/loops.js"></script>
-    <script src="js/basis/objects.js"></script>
-    <script src="js/basis/output.js"></script>
-    <script src="js/basis/types.js"></script>
-    <script src="js/basis/var-let-const.js"></script>
-
-    <!-- modules voorbeeld
-    Bemerk dat ook het attribuut type="module" werd toegevoegd.
-    Dit zorgt ervoor dat een (moderne) browser het JavaScript bestand als module herkent,
-    waardoor je kan gebruik maken van import en export.
-    -->
-    <script type="module" src="js/modules/applicatie.js"></script>
-    <script type="module" src="js/modules/http.js"></script>
-    <script type="module" src="js/modules/weather.js"></script>
+    <!-- Dit is ons gebundeld JavaScript bestand. Het werd gebuild vanuit /src/index.js. -->
+    <script src="js/basis-classes-modules-bundle.js"></script>
 </body>
 </html>

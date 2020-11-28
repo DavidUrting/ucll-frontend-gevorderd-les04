@@ -1,0 +1,145 @@
+﻿<!DOCTYPE html>
+<html lang="nl-be">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+
+    <title>Onderdeel 4 - Demo.JavaScript: basis, classes en modules (ZONDER webpack)</title>
+
+    <!-- Bootstrap 4 CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+</head>
+<body class="container">
+    <h1>Onderdeel 4 - Demo.JavaScript: basis, classes en modules (ZONDER webpack)</h1>
+    <p class="alert alert-warning">
+        Dit html bestand is gelijkaardig aan het index.webpack.html bestand.
+        Maar omdat er geen gebruik wordt gemaakt van webpack moeten alle 'losse' JavaScript bestanden één per één toegevoegd worden onderaan.
+    </p>
+    <article>
+        <h2>Basis</h2>
+        <p>In dit artikel worden de basisconcepten van JavaScript uitgelegd.</p>
+        <section>
+            <h3>Commentaar</h3>
+            <p>Zie slides en <code>comments.js</code></p>
+        </section>
+        <section>
+            <h3>Tonen van output</h3>
+            <p>
+                Zie slides en <code>output.js</code>
+            </p>
+            <ul>
+                <li>console output kan je op de developer console terugvinden van je browser (F12).</li>
+                <li>alerts worden als popup getoond. Momenteel uitgeschakeld in output.js</li>
+                <li id="basics-output-dom"></li>
+                <li id="basics-output-dom2"></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Types - in een notendop</h3>
+            <p>
+                Zie slides en <code>types.js</code>
+            </p>
+        </section>
+        <section>
+            <h3>Exceptions</h3>
+            <p>
+                Zie slides en <code>throw-try-catch-finally.js</code>
+            </p>
+        </section>
+        <section>
+            <h3>Conditional statements</h3>
+            <p>
+                Zie slides en <code>conditional.js</code>
+            </p>
+        </section>
+        <section>
+            <h3>Loops</h3>
+            <p>
+                Zie slides en <code>loops.js</code>
+            </p>
+        </section>
+        <section>
+            <h3>Functions</h3>
+            <p>
+                Zie slides en <code>functions.js</code>
+            </p>
+            <ul>
+                <li>'add' via gedeclareerde functie: <span id="basics-functions-decl"></span></li>
+                <li>'add' via functie expressie: <span id="basics-functions-expr"></span></li>
+                <li>'add' via arrow function: <span id="basics-functions-arrow"></span></li>
+            </ul>
+        </section>
+        <section>
+            <h3>Objects</h3>
+            <p>
+                Zie slides en <code>objects.js</code>
+            </p>
+            <ul>
+                <li>Uitvinder van WWW: <span id="basics-objects-www"></span></li>
+                <li>Uitvinder van JavaScript: <span id="basics-objects-js"></span></li>
+            </ul>
+        </section>
+        <section>
+            <h3>var-let-const</h3>
+            <p>
+                Zie slides en <code>var-let-const.js</code>
+            </p>
+        </section>
+        <section>
+            <h3>Lezen van en reageren op input</h3>
+            <p>
+                Zie slides en <code>input.js</code>
+            </p>
+            <form>
+                <label for="in">Dit veld</label>
+                <input id="basics-input-dom-in" name="in" type="text" />
+                <br />
+                <label for="out">is gesynchroniseerd met dit veld</label>
+                <input id="basics-input-dom-out" name="out" type="text" readonly />
+                <br />
+                <button id="basics-input-dom-button">Synchroniseer manueel</button>
+                <label for="out2">naar dit veld</label>
+                <input id="basics-input-dom-out2" name="out2" type="text" readonly />
+            </form>
+        </section>
+    </article>
+
+    <article>
+        <h2>Modules</h2>
+        <section>
+            <h3>Voorbeeld: gebruik van een weerservice</h3>
+            <p class="alert alert-info">Vandaag is het: <span id="modules-example"></span></p>
+        </section>
+    </article>
+
+    <!-- JavaScript voor Bootstrap 4 -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous"></script>
+
+    <!-- Aangezien we geen webpack gebruiken moeten we alle javascript files één per één toevoegen.
+        Daarenboven moeten we ook op de volgorde letten waarin we ze toevoegen, want sommige bestanden kunnen
+        afhankelijk zijn van andere bestanden. -->
+    <!-- basis concepten -->
+    <script src="js/basis/comments.js"></script>
+    <script src="js/basis/conditional.js"></script>
+    <script src="js/basis/exceptions.js"></script>
+    <script src="js/basis/functions.js"></script>
+    <script src="js/basis/input.js"></script>
+    <script src="js/basis/loops.js"></script>
+    <script src="js/basis/objects.js"></script>
+    <script src="js/basis/output.js"></script>
+    <script src="js/basis/types.js"></script>
+    <script src="js/basis/var-let-const.js"></script>
+
+    <!-- modules voorbeeld
+    Bemerk dat ook het attribuut type="module" werd toegevoegd.
+    Dit zorgt ervoor dat een (moderne) browser het JavaScript bestand als module herkent,
+    waardoor je kan gebruik maken van import en export.
+    -->
+    <script type="module" src="js/modules/applicatie.js"></script>
+    <script type="module" src="js/modules/http.js"></script>
+    <script type="module" src="js/modules/weather.js"></script>
+</body>
+</html>

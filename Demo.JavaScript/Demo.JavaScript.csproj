@@ -6,8 +6,39 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Remove="wwwroot\js\basis\comments.js" />
+    <Content Remove="wwwroot\js\basis\conditional.js" />
+    <Content Remove="wwwroot\js\basis\exceptions.js" />
+    <Content Remove="wwwroot\js\basis\functions.js" />
+    <Content Remove="wwwroot\js\basis\input.js" />
+    <Content Remove="wwwroot\js\basis\loops.js" />
+    <Content Remove="wwwroot\js\basis\objects.js" />
+    <Content Remove="wwwroot\js\basis\output.js" />
+    <Content Remove="wwwroot\js\basis\types.js" />
+    <Content Remove="wwwroot\js\basis\var-let-const.js" />
+    <Content Remove="wwwroot\js\modules\applicatie.js" />
+    <Content Remove="wwwroot\js\modules\http.js" />
+    <Content Remove="wwwroot\js\modules\weather.js" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Folder Include="src\" />
-    <Folder Include="wwwroot\" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\js\basis\comments.js" />
+    <None Include="wwwroot\js\basis\conditional.js" />
+    <None Include="wwwroot\js\basis\exceptions.js" />
+    <None Include="wwwroot\js\basis\functions.js" />
+    <None Include="wwwroot\js\basis\input.js" />
+    <None Include="wwwroot\js\basis\loops.js" />
+    <None Include="wwwroot\js\basis\objects.js" />
+    <None Include="wwwroot\js\basis\output.js" />
+    <None Include="wwwroot\js\basis\types.js" />
+    <None Include="wwwroot\js\basis\var-let-const.js" />
+    <None Include="wwwroot\js\modules\applicatie.js" />
+    <None Include="wwwroot\js\modules\http.js" />
+    <None Include="wwwroot\js\modules\weather.js" />
   </ItemGroup>
 
 </Project>
