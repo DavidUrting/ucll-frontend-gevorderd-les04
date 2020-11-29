@@ -19,6 +19,8 @@ console.error("Een fout.");
 /*
  * HTML DOM
  */
-document.getElementById("basics-output-dom").innerHTML = "Deze tekst werd vanuit output.js gestuurd.";
+document.getElementById("basics-output-dom").innerText = "Deze tekst werd vanuit output.js gestuurd.";
 document.getElementById("basics-output-dom2").innerHTML = "Je kan ook een HTML string genereren en invoegen.<ul><li>Zo kan je dynamisch HTML genereren</li><li>Later zullen we ook zien hoe we dat via de DOM kunnen doen.</li></ul>";
+document.getElementById("basics-output-dom3").value = "Ook de value en styling kan je instellen.";
+document.getElementById("basics-output-dom3").className = "bg-warning"; // en ook de styling kan je aanpassen!
 
