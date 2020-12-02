@@ -1,13 +1,19 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-    <!-- Hoger Lager versie 1
-        1. alle vragen worden in één keer getoond.
-        2. geen 'penalty' voor foutief antwoord: je kan een meermaals antwoorden.
-        3. score kan hoger dan aantal vragen liggen (= meermaals op het juiste antwoord klikken).
-        4. via 'Paginabron weergeven' kan je achterhalen wat de juiste antwoorden zijn.       
-        5. inline JavaScript (= JavaScript in het HTML document). Beter: JavaScript in aparte .js bestand.
-        6. gebruik van 'onclick' attributen voor de aanroep van JavaScript functies. Beter: gebruik addEventListener()
+    <!-- Hoger Lager versie 2
+        1. - 3. Deze puntjes zijn niet meer van toepassing.
+        4. Dit puntje is nu weggewerkt. Een speler moet nu al in de JavaScript gaan kijken om de juiste antwoorden te kennen.
+           Met Webpack zouden we dat nog moeilijker kunnen maken -> webpack gooit alles op één quasi onleesbare lijn.
+        5. - 6. Deze puntjes zijn niet meer van toepassing.
+        7. Dit puntje is nu weggewerkt. De code is compacter maar misschien wel iets moeilijker om te lezen.
+           Vandaar werd er ook wat commentaar in voorzien.
+
+        Oef, we zijn rond ... maar nu komt de opdrachtgever langs:
+        "Zou je de vragen in willekeurige volgorde kunnen stellen?"
+
+        Dus een nieuw probleem:
+        8. De vragen zijn hardcoded in de .html file. Om willekeurige vragen te stellen moeten we de DOM dynamisch kunnen opbouwen.
     -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,42 +22,42 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>UCLL Hoger Lager Spel (v1)</title>
+    <title>UCLL Hoger Lager Spel (v4)</title>
 </head>
 <body>
-    <h1>UCLL Hoger Lager Spel (v1)</h1>
-    <section>
+    <h1>UCLL Hoger Lager Spel (v4)</h1>
+    <section id="vraag1">
         <p>
             Het aantal studenten is
             <br />
-            <button onclick="verhoogJuisteAntwoordenTeller()">Hoger</button> <button>Lager</button>
+            <button id="vraag1_hoger">Hoger</button> <button id="vraag1_lager">Lager</button>
             <br />
             dan 14500.
         </p>
     </section>
-    <section>
+    <section id="vraag2" style="display: none">
         <p>
             Het aantal campussen van UCLL is
             <br />
-            <button>Hoger</button> <button onclick="verhoogJuisteAntwoordenTeller()">Lager</button>
+            <button id="vraag2_hoger">Hoger</button> <button id="vraag2_lager">Lager</button>
             <br />
             dan 10.
         </p>
     </section>
-    <section>
+    <section id="vraag3" style="display: none">
         <p>
             Het aantal graduaten die je kan volgen bij UCLL is
             <br />
-            <button onclick="verhoogJuisteAntwoordenTeller()">Hoger</button> <button>Lager</button>
+            <button id="vraag3_hoger">Hoger</button> <button id="vraag3_lager">Lager</button>
             <br />
             dan 12.
         </p>
     </section>
-    <section>
+    <section id="vraag4" style="display: none">
         <p>
             Het aantal medewerkers van UCLL is
             <br />
-            <button>Hoger</button> <button onclick="verhoogJuisteAntwoordenTeller()">Lager</button>
+            <button id="vraag4_hoger">Hoger</button> <button id="vraag4_lager">Lager</button>
             <br />
             dan 1800.
         </p>
@@ -61,18 +67,12 @@
         <p>Uw score is: <span id="score"></span></p>
     </section>
 
-    <script>
-        let aantalJuisteAntwoorden = 0;
-        function verhoogJuisteAntwoordenTeller() {
-            aantalJuisteAntwoorden++;
-            document.getElementById("score").innerText = aantalJuisteAntwoorden;
-        }
-    </script>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/versie4.js"></script>
 </body>
 </html>
