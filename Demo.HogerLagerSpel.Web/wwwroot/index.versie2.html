@@ -1,13 +1,10 @@
 ﻿<!doctype html>
 <html lang="en">
 <head>
-    <!-- Hoger Lager versie 1
-        1. alle vragen worden in één keer getoond.
-        2. geen 'penalty' voor foutief antwoord: je kan een meermaals antwoorden.
-        3. score kan hoger dan aantal vragen liggen (= meermaals op het juiste antwoord klikken).
-        4. via 'Paginabron weergeven' kan je achterhalen wat de juiste antwoorden zijn.       
-        5. inline JavaScript (= JavaScript in het HTML document). Beter: JavaScript in aparte .js bestand.
-        6. gebruik van 'onclick' attributen voor de aanroep van JavaScript functies. Beter: gebruik addEventListener()
+    <!-- Hoger Lager versie 2
+        1. - 4. Puntjes 1 tot en met 4 zijn nog steeds van toepassing.
+        5. - 6. Deze versie is beter dan de vorige: puntjes 5 en 6 zijn weggewerkt.
+        7. Verder staat er in versie2.js nogal veel repetitieve code...
     -->
     <!-- Required meta tags -->
     <meta charset="utf-8">
@@ -16,15 +13,15 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 
-    <title>UCLL Hoger Lager Spel (v1)</title>
+    <title>UCLL Hoger Lager Spel (v2)</title>
 </head>
 <body>
-    <h1>UCLL Hoger Lager Spel (v1)</h1>
+    <h1>UCLL Hoger Lager Spel (v2)</h1>
     <section id="vraag1">
         <p>
             Het aantal studenten is
             <br />
-            <button onclick="verhoogJuisteAntwoordenTeller()">Hoger</button> <button>Lager</button>
+            <button id="vraag1_correct_antwoord">Hoger</button> <button>Lager</button>
             <br />
             dan 14500.
         </p>
@@ -33,7 +30,7 @@
         <p>
             Het aantal campussen van UCLL is
             <br />
-            <button>Hoger</button> <button onclick="verhoogJuisteAntwoordenTeller()">Lager</button>
+            <button>Hoger</button> <button id="vraag2_correct_antwoord">Lager</button>
             <br />
             dan 10.
         </p>
@@ -42,7 +39,7 @@
         <p>
             Het aantal graduaten die je kan volgen bij UCLL is
             <br />
-            <button onclick="verhoogJuisteAntwoordenTeller()">Hoger</button> <button>Lager</button>
+            <button id="vraag3_correct_antwoord">Hoger</button> <button>Lager</button>
             <br />
             dan 12.
         </p>
@@ -51,7 +48,7 @@
         <p>
             Het aantal medewerkers van UCLL is
             <br />
-            <button>Hoger</button> <button onclick="verhoogJuisteAntwoordenTeller()">Lager</button>
+            <button>Hoger</button> <button id="vraag4_correct_antwoord">Lager</button>
             <br />
             dan 1800.
         </p>
@@ -61,18 +58,12 @@
         <p>Uw score is: <span id="score"></span></p>
     </section>
 
-    <script>
-        let aantalJuisteAntwoorden = 0;
-        function verhoogJuisteAntwoordenTeller() {
-            aantalJuisteAntwoorden++;
-            document.getElementById("score").innerText = aantalJuisteAntwoorden;
-        }
-    </script>
-
     <!-- Optional JavaScript -->
     <!-- jQuery first, then Popper.js, then Bootstrap JS -->
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+    <script src="js/versie2.js"></script>
 </body>
 </html>
