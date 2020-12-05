@@ -1,5 +1,5 @@
 ﻿export function get(url, callback) {
-    var xmlhttp = new XMLHttpRequest();
+    let xmlhttp = new XMLHttpRequest();
     xmlhttp.onreadystatechange = function () {
         handleXmlHttpRequestDone(xmlhttp, callback);
     };
@@ -9,7 +9,7 @@
 
 function handleXmlHttpRequestDone(xmlhttp, callback) {
     if (xmlhttp.readyState === 4) {
-        var response;
+        let response;
         if (!xmlhttp.responseText) {
             if (xmlhttp.status === 200) {
                 response = { status: "success" };

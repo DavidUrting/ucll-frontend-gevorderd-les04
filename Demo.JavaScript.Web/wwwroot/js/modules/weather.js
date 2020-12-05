@@ -38,4 +38,4 @@ class OpenWeatherMap extends BaseWeather {
     }
 }
 
-export var weatherService = new OpenWeatherMap();
+export let weatherService = new OpenWeatherMap();
